@@ -1,0 +1,330 @@
+generated: '2026-08-30'
+method: searched
+source: https://registry.npmjs.org/-/v1/search?text=%40doctorwork
+note: >-
+  These are the FIRST-PARTY npm packages published by the doctorwork.com engineering
+  organisation — the engineering estate of Tencent Doctorwork (企鹅医生), one of the two
+  halves of the 2018 merger that formed Tencent Trusted Doctors (企鹅杏仁). First-party
+  attribution is established from the packages themselves, not from the registry name:
+  @doctorwork/saga declares repository git@git.doctorwork.com:web/saga.git (the company's
+  own internal GitLab), and the published @doctorwork/one micro-frontend runtime and
+  @doctorwork/sso-sdk are the exact bundles still being loaded by the company's own hosts
+  (https://files.xingren.com/one/v1/one.base.umd.js and https://files.xingren.com/sso/sdk.min.js
+  on developer.doctorwork.com).
+attribution:
+  registry_scope: '@doctorwork'
+  github_organization: https://github.com/doctorwork
+  github_org_display_name: 企鹅医生
+  github_org_type: Organization
+  github_org_created: '2017-10-10'
+  github_public_repos: 14
+important: >-
+  NONE of these packages is an API client library. They are internal frontend and build
+  tooling — a micro-frontend runtime, an SSO browser SDK, RUM/monitoring SDKs, component
+  libraries and mini-program build plugins. No `SDKs` pointer is emitted in apis.yml for
+  this artifact, because the sdk_count check asks whether the provider ships a client
+  library for its API, and it does not. Emitting one here would be gaming the check.
+sdk_for_public_api: false
+package_count: 27
+currency:
+  latest_publish_across_scope: '2022-12-29'
+  latest_publish_package: '@doctorwork/web-report-sdk'
+  github_org_last_push: '2022-12-10'
+  finding: >-
+    Every package in the scope is frozen. The most recently published artifact in the
+    entire @doctorwork namespace dates to 2022-12-29 and the GitHub organisation's most
+    recent push to any of its 14 public repositories is 2022-12-10. This is consistent
+    with the company's absorption into Medlinker (acquisition completed 2021-01-01) and
+    the subsequent retirement of the 企鹅杏仁 brand.
+packages:
+  - language: javascript
+    registry: npm
+    name: '@doctorwork/one'
+    url: https://www.npmjs.com/package/@doctorwork/one
+    install: npm install @doctorwork/one
+    official: true
+    api_client: false
+    kind: micro-frontend-runtime
+    version: 1.1.11
+    published: '2021-09-16'
+    first_published: '2020-06-14'
+    version_count: 41
+  - language: javascript
+    registry: npm
+    name: '@doctorwork/one-pro'
+    url: https://www.npmjs.com/package/@doctorwork/one-pro
+    install: npm install @doctorwork/one-pro
+    official: true
+    api_client: false
+    kind: micro-frontend-runtime
+    version: 1.1.11
+    published: '2021-09-16'
+  - language: javascript
+    registry: npm
+    name: '@doctorwork/one-plugin'
+    url: https://www.npmjs.com/package/@doctorwork/one-plugin
+    install: npm install @doctorwork/one-plugin
+    official: true
+    api_client: false
+    kind: build-plugin
+    description: 静态资源管理系统 (static asset management system)
+    version: 1.0.1
+    published: '2021-09-01'
+    version_count: 10
+  - language: javascript
+    registry: npm
+    name: '@doctorwork/sso-sdk'
+    url: https://www.npmjs.com/package/@doctorwork/sso-sdk
+    install: npm install @doctorwork/sso-sdk
+    official: true
+    api_client: false
+    kind: browser-sso-sdk
+    description: sso-js-sdk — the browser SSO client, served in production from https://files.xingren.com/sso/sdk.min.js
+    version: 1.1.11
+    published: '2020-11-11'
+  - language: javascript
+    registry: npm
+    name: '@doctorwork/sso-sdk-admin'
+    url: https://www.npmjs.com/package/@doctorwork/sso-sdk-admin
+    install: npm install @doctorwork/sso-sdk-admin
+    official: true
+    api_client: false
+    kind: browser-sso-sdk
+    version: 0.0.11
+    published: '2022-08-26'
+  - language: javascript
+    registry: npm
+    name: '@doctorwork/web-report-sdk'
+    url: https://www.npmjs.com/package/@doctorwork/web-report-sdk
+    install: npm install @doctorwork/web-report-sdk
+    official: true
+    api_client: false
+    kind: rum-monitoring-sdk
+    description: web monitor sdk
+    version: 1.13.3
+    published: '2022-12-29'
+    first_published: '2019-12-05'
+    version_count: 49
+  - language: javascript
+    registry: npm
+    name: '@doctorwork/wx-report-sdk'
+    url: https://www.npmjs.com/package/@doctorwork/wx-report-sdk
+    install: npm install @doctorwork/wx-report-sdk
+    official: true
+    api_client: false
+    kind: rum-monitoring-sdk
+    description: wx monitor sdk (WeChat mini-program)
+    version: 1.8.1
+    published: '2021-08-27'
+  - language: javascript
+    registry: npm
+    name: '@doctorwork/components'
+    url: https://www.npmjs.com/package/@doctorwork/components
+    install: npm install @doctorwork/components
+    official: true
+    api_client: false
+    kind: ui-component-library
+    version: 1.1.2
+    published: '2020-01-16'
+  - language: javascript
+    registry: npm
+    name: '@doctorwork/components-admin'
+    url: https://www.npmjs.com/package/@doctorwork/components-admin
+    install: npm install @doctorwork/components-admin
+    official: true
+    api_client: false
+    kind: ui-component-library
+    version: 0.0.10
+    published: '2021-08-25'
+  - language: javascript
+    registry: npm
+    name: '@doctorwork/components-rn'
+    url: https://www.npmjs.com/package/@doctorwork/components-rn
+    install: npm install @doctorwork/components-rn
+    official: true
+    api_client: false
+    kind: ui-component-library
+    version: 1.0.2
+    published: '2018-12-17'
+  - language: javascript
+    registry: npm
+    name: '@doctorwork/clinic-ui-config'
+    url: https://www.npmjs.com/package/@doctorwork/clinic-ui-config
+    install: npm install @doctorwork/clinic-ui-config
+    official: true
+    api_client: false
+    kind: ui-config
+    version: 1.0.1
+    published: '2021-06-25'
+  - language: javascript
+    registry: npm
+    name: '@doctorwork/remax'
+    url: https://www.npmjs.com/package/@doctorwork/remax
+    install: npm install @doctorwork/remax
+    official: true
+    api_client: false
+    kind: mini-program-framework-fork
+    version: 1.1.0-alpha.6
+    published: '2019-09-17'
+  - language: javascript
+    registry: npm
+    name: '@doctorwork/remax-cli'
+    url: https://www.npmjs.com/package/@doctorwork/remax-cli
+    install: npm install @doctorwork/remax-cli
+    official: true
+    api_client: false
+    kind: mini-program-framework-fork
+    version: 1.1.0-alpha.6
+    published: '2019-09-17'
+  - language: javascript
+    registry: npm
+    name: '@doctorwork/remax-plugin'
+    url: https://www.npmjs.com/package/@doctorwork/remax-plugin
+    install: npm install @doctorwork/remax-plugin
+    official: true
+    api_client: false
+    kind: build-plugin
+    version: 1.1.4
+    published: '2021-05-17'
+    version_count: 16
+  - language: javascript
+    registry: npm
+    name: '@doctorwork/saga'
+    url: https://www.npmjs.com/package/@doctorwork/saga
+    install: npm install @doctorwork/saga
+    official: true
+    api_client: false
+    kind: state-management
+    description: 处理异步事件saga封装
+    repository: git@git.doctorwork.com:web/saga.git
+    version: 0.0.6
+    published: '2018-11-20'
+    version_count: 6
+  - language: javascript
+    registry: npm
+    name: '@doctorwork/dva'
+    url: https://www.npmjs.com/package/@doctorwork/dva
+    install: npm install @doctorwork/dva
+    official: true
+    api_client: false
+    kind: state-management
+    version: 0.0.2
+    published: '2019-12-02'
+  - language: javascript
+    registry: npm
+    name: '@doctorwork/hooks'
+    url: https://www.npmjs.com/package/@doctorwork/hooks
+    install: npm install @doctorwork/hooks
+    official: true
+    api_client: false
+    kind: react-utilities
+    version: 1.0.0
+    published: '2021-03-10'
+  - language: javascript
+    registry: npm
+    name: '@doctorwork/utils'
+    url: https://www.npmjs.com/package/@doctorwork/utils
+    install: npm install @doctorwork/utils
+    official: true
+    api_client: false
+    kind: utilities
+    version: 1.0.0
+    published: '2021-03-10'
+  - language: javascript
+    registry: npm
+    name: '@doctorwork/themes'
+    url: https://www.npmjs.com/package/@doctorwork/themes
+    install: npm install @doctorwork/themes
+    official: true
+    api_client: false
+    kind: theming
+    version: 1.1.1
+    published: '2021-04-16'
+  - language: javascript
+    registry: npm
+    name: '@doctorwork/eggjs-mongo'
+    url: https://www.npmjs.com/package/@doctorwork/eggjs-mongo
+    install: npm install @doctorwork/eggjs-mongo
+    official: true
+    api_client: false
+    kind: server-plugin
+    version: 1.2.5
+    published: '2020-08-01'
+  - language: javascript
+    registry: npm
+    name: '@doctorwork/dw-cli'
+    url: https://www.npmjs.com/package/@doctorwork/dw-cli
+    install: npm install @doctorwork/dw-cli
+    official: true
+    api_client: false
+    kind: internal-scaffolding-cli
+    version: 1.0.4
+    published: '2018-12-29'
+  - language: javascript
+    registry: npm
+    name: '@doctorwork/starter'
+    url: https://www.npmjs.com/package/@doctorwork/starter
+    install: npm install @doctorwork/starter
+    official: true
+    api_client: false
+    kind: internal-scaffolding-cli
+    version: 1.0.1
+    published: '2019-01-24'
+  - language: javascript
+    registry: npm
+    name: '@doctorwork/h5'
+    url: https://www.npmjs.com/package/@doctorwork/h5
+    install: npm install @doctorwork/h5
+    official: true
+    api_client: false
+    kind: web-toolkit
+    version: 1.0.4
+    published: '2019-08-15'
+  - language: javascript
+    registry: npm
+    name: '@doctorwork/react-easy'
+    url: https://www.npmjs.com/package/@doctorwork/react-easy
+    install: npm install @doctorwork/react-easy
+    official: true
+    api_client: false
+    kind: ui-component-library
+    version: 1.1.24
+    published: '2018-10-26'
+  - language: javascript
+    registry: npm
+    name: '@doctorwork/write-easy'
+    url: https://www.npmjs.com/package/@doctorwork/write-easy
+    install: npm install @doctorwork/write-easy
+    official: true
+    api_client: false
+    kind: editor
+    version: 1.1.19
+    published: '2019-05-06'
+  - language: javascript
+    registry: npm
+    name: '@doctorwork/postcss-autoimport'
+    url: https://www.npmjs.com/package/@doctorwork/postcss-autoimport
+    install: npm install @doctorwork/postcss-autoimport
+    official: true
+    api_client: false
+    kind: build-plugin
+    description: PostCSS plugin for automatic import of global dependencies
+    version: 0.1.0
+    published: '2018-11-15'
+  - language: javascript
+    registry: npm
+    name: '@doctorwork/wepy-plugin-migratetotaro'
+    url: https://www.npmjs.com/package/@doctorwork/wepy-plugin-migratetotaro
+    install: npm install @doctorwork/wepy-plugin-migratetotaro
+    official: true
+    api_client: false
+    kind: migration-tool
+    version: 0.0.1
+    published: '2020-05-14'
+registries_probed:
+  - registry: npm
+    result: 27 first-party packages under the @doctorwork scope
+  - registry: pypi
+    result: no package at pypi.org/pypi/xingren or /doctorwork (both 404)
+  - registry: pkg.go.dev
+    result: not probed — the company ships no Go surface

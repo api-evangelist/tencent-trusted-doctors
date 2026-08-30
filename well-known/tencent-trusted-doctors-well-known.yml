@@ -1,0 +1,133 @@
+generated: '2026-08-30'
+method: probed
+source: direct HTTPS probe of every host associated with this company, 2026-08-30
+hit_count: 0
+pointer_emitted: false
+note: >-
+  NO /.well-known/ document is served by any host associated with Tencent Trusted Doctors,
+  so NO WellKnown and NO SecurityTxt pointer is written into apis.yml. Every 200 recorded
+  below is an SPA catch-all, not a document — see soft_404_control. The company's primary
+  domain (xingren.com) no longer resolves to its own site at all: it returns HTTP 301 to
+  https://www.medlinker.com, the acquirer that absorbed the company on 2021-01-01.
+soft_404_control:
+  - host: https://developer.doctorwork.com
+    probe: /.well-known/aeprobe-22247-control
+    status: 200
+    bytes: 1557
+    control_probe: /zzz-nonexistent-28664
+    control_status: 200
+    control_bytes: 1557
+    verdict: >-
+      Catch-all. A randomly generated path returns HTTP 200 with a byte-identical
+      single-page-app shell (umi 3.5.39, app "oa-dev-tools"). Every 200 on this host is
+      therefore a false positive and none is counted as a document.
+  - host: https://developer.xingren.com
+    probe: /.well-known/aeprobe-15183-control
+    status: 200
+    bytes: 544
+    control_probe: /zzz-nonexistent-27920
+    control_status: 200
+    control_bytes: 544
+    verdict: >-
+      Catch-all. Byte-identical 544-byte umi 3.2.25 SPA shell for every path probed,
+      including a randomly generated one. No 200 on this host is a document.
+hosts:
+  - host: https://www.doctorwork.com
+    note: >-
+      Historical corporate domain of Tencent Doctorwork (企鹅医生); today it serves the
+      successor consumer brand 未来医生 (Future Doctor). Every /.well-known/ path returns a
+      301 redirect; nothing is served.
+    documents:
+      - path: /.well-known/security.txt
+        status: 301
+      - path: /.well-known/openid-configuration
+        status: 301
+      - path: /.well-known/oauth-authorization-server
+        status: 301
+      - path: /.well-known/oauth-protected-resource
+        status: 301
+      - path: /.well-known/api-catalog
+        status: 301
+      - path: /.well-known/ai-plugin.json
+        status: 301
+      - path: /.well-known/agent-card.json
+        status: 301
+      - path: /.well-known/agent.json
+        status: 301
+  - host: https://api.xingren.com
+    note: >-
+      The legacy 杏仁医生 mobile/app API gateway. Still resolving and still answering, but
+      it is a closed first-party gateway, not a published developer API: every path
+      returns the gateway's own JSON envelope
+      {"success":false,"code":103,"msg":"API不存在"} ("API does not exist").
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/oauth-protected-resource
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+  - host: https://developer.doctorwork.com
+    note: >-
+      "开发者中心" (Developer Center) — but an INTERNAL one. The served HTML loads
+      /_/sso/internal/user and the app bundle is named "oa-dev-tools" (OA = office
+      automation), i.e. employee tooling behind internal SSO, not a public developer
+      portal. All 200s below are the catch-all shell recorded in soft_404_control and are
+      NOT documents.
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 200
+        file: null
+        catch_all: true
+      - path: /.well-known/oauth-authorization-server
+        status: 200
+        file: null
+        catch_all: true
+      - path: /.well-known/oauth-protected-resource
+        status: 200
+        file: null
+        catch_all: true
+      - path: /.well-known/api-catalog
+        status: 200
+        file: null
+        catch_all: true
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+  - host: https://www.xingren.com
+    note: >-
+      The company's own primary domain. Every path, including the site root, returns HTTP
+      301 to https://www.medlinker.com. The 302s recorded below are the redirect hop.
+      Nothing belonging to this company is served here any more.
+    documents:
+      - path: /.well-known/security.txt
+        status: 302
+      - path: /.well-known/openid-configuration
+        status: 302
+      - path: /.well-known/oauth-authorization-server
+        status: 302
+      - path: /.well-known/oauth-protected-resource
+        status: 302
+      - path: /.well-known/api-catalog
+        status: 302
+      - path: /.well-known/ai-plugin.json
+        status: 302
+      - path: /.well-known/agent-card.json
+        status: 302
+      - path: /.well-known/agent.json
+        status: 302

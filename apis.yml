@@ -1,17 +1,50 @@
 aid: tencent-trusted-doctors
 name: Tencent Trusted Doctors
-description: 'Tencent Trusted Doctors is a company surfaced via the API Evangelist harvest backlog (source:
-  secondary-market) and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  Tencent Trusted Doctors (企鹅杏仁) was a Chinese digital-health group formed in August 2018
+  by merging Tencent's medical unit Tencent Doctorwork (企鹅医生) with the Shanghai doctor
+  platform Trusted Doctors (杏仁医生). It combined an online consultation and doctor-social
+  platform with a network of bricks-and-mortar clinics, connecting roughly 440,000 verified
+  physicians to more than 10 million patients, and reached unicorn valuation on a USD 250M
+  round in April 2019 backed by Tencent and Country Garden Ventures. The company was
+  acquired by Medlinker (医联) with the deal completing 2021-01-01, and the 企鹅杏仁 brand was
+  retired in April 2021 in favour of 未来医生 (Future Doctor). It never published a public
+  developer program, API reference, or machine-readable contract, and its primary domain
+  xingren.com now redirects wholesale to the acquirer.
 url: https://raw.githubusercontent.com/api-evangelist/tencent-trusted-doctors/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
+x-harvest-source-url: https://www.hiive.com/securities/tencent-trusted-doctors-stock
 x-tier: stub
 x-tier-reason: harvest
+x-status: acquired
+x-acquired-by:
+  company: Medlinker (医联)
+  website: https://www.medlinker.com
+  completed: '2021-01-01'
+  evidence: https://www.xingren.com/ returns HTTP 301 to https://www.medlinker.com
+x-successor-brand:
+  name: 未来医生 (Future Doctor)
+  website: https://www.doctorwork.com/
+  operator: 北京腾康汇医科技有限公司 / 北京智医方程科技有限公司
+  note: >-
+    The successor brand describes itself as "脱胎于2014年成立的医联集团" (born out of Medlinker
+    Group) and publishes only medlinker.com contact addresses, so artifacts served from
+    doctorwork.com today are attributed to Medlinker, not to this company. Only the
+    @doctorwork npm scope and the github.com/doctorwork organisation — both of which
+    predate the acquisition and are explicitly named 企鹅医生 — are attributed here.
 specificationVersion: '0.20'
 created: '2026-08-30'
 modified: '2026-08-30'
 tags:
 - Company
+- Health
+- Healthcare
+- Telemedicine
+- Digital Health
+- Clinics
+- China
+- Acquired
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -20,4 +53,37 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://www.hiive.com/securities/tencent-trusted-doctors-stock
+  url: https://www.doctorwork.com/
+- type: GitHubOrganization
+  url: https://github.com/doctorwork
+- type: Packages
+  url: packages/tencent-trusted-doctors-packages.yml
+x-coverage:
+  state: none
+  reason: defunct
+  detail: >-
+    The company was absorbed into Medlinker on 2021-01-01 and its brand retired in April
+    2021; its own primary domain www.xingren.com now returns a blanket HTTP 301 to
+    www.medlinker.com, and the only surviving "开发者中心" at developer.doctorwork.com is
+    internal employee tooling behind the company's own SSO (the page loads
+    /_/sso/internal/user and an app bundle named "oa-dev-tools"), not a public developer
+    portal.
+  evidence:
+  - url: https://www.xingren.com/
+    status: 301
+  - url: https://developer.doctorwork.com/
+    status: 200
+  - url: https://api.xingren.com/openapi.json
+    status: 404
+  - url: https://www.doctorwork.com/openapi.json
+    status: 301
+  - url: https://developer.doctorwork.com/.well-known/agent-card.json
+    status: 404
+  - url: https://github.com/doctorwork
+    status: 200
+  checked: '2026-08-30'
+x-enrichment:
+  date: '2026-08-30'
+  status: minimal
+  artifacts_added: 2
+  pass: local-v1
