@@ -64,5 +64,35 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Tencent Trusted Doctors is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://www.hiive.com/securities/tencent-trusted-doctors-stock
+> **Acquired or rebranded.** This company was acquired, merged or renamed. Its API, if it still exists, is offered under another name. This profile is kept as a historical record and is not maintained or rated.
+
+Tencent Trusted Doctors (企鹅杏仁) was a Chinese digital-health group formed in August 2018 by merging Tencent's medical unit Tencent Doctorwork (企鹅医生) with the Shanghai doctor platform Trusted Doctors (杏仁医生). It combined an online consultation and doctor-social platform with a network of bricks-and-mortar clinics, connecting roughly 440,000 verified physicians to more than 10 million patients, and reached unicorn valuation on a USD 250M round in April 2019 backed by Tencent and Country Garden Ventures. The company was acquired by Medlinker (医联) with the deal completing 2021-01-01, and the 企鹅杏仁 brand was retired in April 2021 in favour of 未来医生 (Future Doctor). It never published a public developer program, API reference, or machine-readable contract, and its primary domain xingren.com now redirects wholesale to the acquirer.
+
+**Areas:** Company · Health · Healthcare · Telehealth · Digital Health · Clinics · China · Acquired
+
+## Tencent Trusted Doctors on APIs.io (historical record)
+
+Everything profiled for Tencent Trusted Doctors is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/tencent-trusted-doctors/](https://apis.io/providers/tencent-trusted-doctors/)** — or go straight to one of the APIs or properties below.
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.doctorwork.com/)
+- [GitHub](https://github.com/doctorwork)
+
+## API Evangelist rating
+
+**Not rated** — this company is recorded as acquired or rebranded, so no score is published. If it is in fact operating, say so on this repository and it will be re-profiled.
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Tencent Trusted Doctors: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/tencent-trusted-doctors/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
